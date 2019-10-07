@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>My App</title>
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="app.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* TODO */
+  </style>
+</head>
+
+<body>
+  <div class="app-page" data-page="home">
+
+    <div class="title app-content">
+      <div class="app-section" id="maintitle">
+        <h1 id="mainhtag">Edu<br />Fine</h1>
+        <div class="lds-ellipsis">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="app-page" data-page="page2">
+    <div class="app-topbar">
+      <div class="app-button left" data-target="navigation"><img
+          src="https://img.icons8.com/offices/16/000000/menu.png"></div>
+      <div class="app-title">Mobile Communication</div>
+      <div class="app-button right" data-target="settings">S</div>
+    </div>
+    <div class="app-content">
+      <div class="app-section sectionheader"><h1>Introduction</h1></div>
+  
+    <div class="app-section">
+        <p>The ability to communicate with people on the move has evolved remarkably since Guglielmo Marconi first demonstrated radio&#39;s ability to provide continuous contact with ships sailing the English channel. That was in 1897, and since then new wireless communications methods and services have been enthusiastically adopted by people throughout the world.</p>
+        <p>Particularly during the past ten years, the mobile radio communications industry has grown by orders of magnitude, fueled by digital and RF circuit fabrication improvements, new large-scale circuit integration, and other miniaturization technologies which make portable radio equipment smaller, cheaper, and more reliable.Wireless communications is enjoying its fastest growth period in history,due to enabling technologies which permit wide spread deployment.</p>
+        <p>Historically.growth in the mobile communications field has come slowly, and has been coupled closely to technological improvements. The ability to provide wireless communicationsto an entire population was not even conceived until BellLaboratories developed the cellular concept in the 1960s and 1970s. With the development of highly reliable, miniature, solid-stateradio frequency hardware in the 1970s, the wireless communications era was born.</p>
+        <p>The below figure shows that the first 35 years of mobile telephone saw little market penetration due to high cost and the technological challenges involved, but how, in the past decade, cellular telephone has been accepted by consumers at rates comparable to the television, and the video cassette recorder.</p>
+    </div>
+    <div class="app-section">
+      <img src="">
+    </div>
+  </div>
+ 
+  <div class="app-page" data-page="navigation">
+    <div class="app-topbar">
+      <div class="app-button left" data-back>Back</div>
+      <div class="app-title">Table of Contents</div>
+
+    </div>
+
+    <div class="app-content">
+        <ul class="app-list">
+            <label><b>1. Introduction to wireless communication systems</b></label>
+            <li class="app-button" data-target="page2">Introduction</li>
+            <label><b>2. The cellular Concept</b></label>
+            <li class="app-button" data-target="page3">Frequency Reuse</li>
+            <li class="app-button" data-target="page4">Channel Assignment Strategies</li>
+            <li class="app-button" data-target="page5">Handoff strategies</li>
+            <li class="app-button" data-target="page6">Interference and system capacity</li>
+            <li class="app-button" data-target="page7">Trunking and Grade of service</li>
+            <li class="app-button" data-target="page8">Improving the capacity of cellular systems</li>
+          </ul>
+    </div>
+  </div>
+
+  <div class="app-page" data-page="settings">
+      <div class="app-topbar">
+        <div class="app-button left" data-back>Back</div>
+        <div class="app-title">Settings</div>
+  
+      </div>
+    </div>
+  <script src="app.js"></script>
+  <script src="app.min.js"></script>
+  <script>
+    App.load("home");
+    setTimeout(function () {
+      App.load("page2");
+    }, 3000);
+    App.controller('home', function (page) {
+      // put stuff here
+    });
+
+    App.controller('page2', function (page) {
+      // put stuff here
+    });
+
+    try {
+      App.restore();
+    } catch (err) {
+      App.load('home');
+    }
+  </script>
+</body>
+
+</html>
