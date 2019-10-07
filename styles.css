@@ -37,6 +37,13 @@ h1 {
     font-size: 70px;
 }
 
+ul.textjustification li {
+  position: relative;
+  display:block;
+  float:left;
+  width: 50%
+
+}
 ul.fontsize li {
   position: relative;
   display:block;

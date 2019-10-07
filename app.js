@@ -14,6 +14,19 @@ function applyt(x) {
 document.getElementById("styles").href=x.id+".css";
 
 }
+
+function justify() {
+
+    document.body.style.textAlign="justify";
+    
+    }
+
+    function unjustify() {
+
+        document.body.style.textAlign="left";
+        
+        }
+
 var themes={
     dark: {
         pagebackground: "#000",
