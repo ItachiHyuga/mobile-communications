@@ -1,7 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
 body {
-	font-family: "Montserrat";
+  font-family: "Montserrat";
+
 }
+
 
 .title {
     background-color: black;
@@ -28,14 +30,60 @@ h1 {
 	margin: 10px 0;
 }
 
-.sectionheader {
-background-color: black;
-}
+
 
 #maintitle {
     background-color: black;
     font-size: 70px;
 }
+
+ul.fontsize li {
+  position: relative;
+  display:block;
+  float:left;
+  width: 50%
+}
+ul.themes li {
+  position: relaitve;
+  display: block;
+  float: left;
+  height: 54px;
+  width: 20%
+}
+
+#dark{
+background: rgb(27, 27, 27)
+}
+#coffee{
+background: rgb(43, 5, 5)
+}
+#sea{
+background: rgb(13, 9, 65)
+}
+#sky{
+background: rgb(0, 204, 255)
+}
+#default{
+background: #ffffff
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .lds-ellipsis {
     display: inline-block;
