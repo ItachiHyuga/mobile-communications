@@ -27,13 +27,4 @@ function justify() {
         
         }
 
-var themes={
-    dark: {
-        pagebackground: "#000",
-        contentbackground: "#1b1b1b",
-        fontcolor: "#efeff4"
-    }
-}
-
-
- 
+        
