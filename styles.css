@@ -67,11 +67,13 @@ ul.fontsize li {
   width: 50%
 }
 ul.themes li {
-  position: relaitve;
+  position: relative;
   display: block;
   float: left;
   height: 54px;
-  width: 20%
+  width: 20%;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 #dark{
@@ -89,7 +91,21 @@ background: #cdf9ff;
 #default{
 background: #efeff4;
 }
-
+#dark2{
+  background: black;
+}
+#coffee2{
+  background: #3a1203;
+}
+#sea2{
+  background: #031f2f;
+}
+#leaves{
+  background: #c9e5ab;
+}
+#white{
+  background: white;
+}
 
 
 

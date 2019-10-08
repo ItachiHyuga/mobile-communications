@@ -4,7 +4,7 @@ document.body.style.fontSize=localStorage.getItem('fontsize')
 
 document.body.style.textAlign=localStorage.getItem('justification')
 
-document.getElementById("styles").href=localStorage.getItem('theme')+".css"
+document.getElementById("styles").href="themes/"+localStorage.getItem('theme')+".css"
 //fontsize
 function resizeText(multiplier) {
   if (document.body.style.fontSize == "") {
@@ -24,7 +24,7 @@ function resizeText(multiplier) {
 //theme
 function applyt(x) {
 
-  document.getElementById("styles").href = x.id + ".css";
+  document.getElementById("styles").href = "themes/"+x.id + ".css";
   localStorage.setItem("theme",x.id);
 
 }

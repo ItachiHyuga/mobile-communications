@@ -1,0 +1,25 @@
+.app-page, .app-content { background:  white; }
+
+p, li{
+  color: black;
+}
+
+.app-section {
+  background: white;
+}
+
+.sectionheader {
+  background: rgb(255, 255, 255);
+}
+
+
+.app-content .app-button {
+    background-color: white;
+    color: black;
+  }
+
+  
+.app-list > li {
+    background-color: white;
+    color: black;
+  }

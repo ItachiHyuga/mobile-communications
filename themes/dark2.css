@@ -1,0 +1,25 @@
+.app-page, .app-content { background:  #1b1b1b; }
+
+p, li{
+  color: white;
+}
+
+.app-section {
+  background: black;
+}
+
+.sectionheader {
+  background: #1b1b1b;
+}
+
+
+.app-content .app-button {
+    background-color: black;
+    color: #efeff4;
+  }
+
+  
+.app-list > li {
+    background-color: black;
+    color: #efeff4;
+  }
