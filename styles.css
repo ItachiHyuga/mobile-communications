@@ -44,6 +44,13 @@ img {
   font-weight: bold;
 }
 
+ul.footerl li {
+  position: relative;
+  display:block;
+  float:left;
+  width: 50%
+}
+
 ul.textjustification li {
   position: relative;
   display:block;
@@ -69,16 +76,16 @@ ul.themes li {
 background: rgb(27, 27, 27)
 }
 #coffee{
-background: rgb(43, 5, 5)
+background: #38220f;
 }
 #sea{
-background: rgb(13, 9, 65)
+background: #154b67;
 }
 #sky{
-background: rgb(0, 204, 255)
+background: #cdf9ff;
 }
 #default{
-background: #ffffff
+background: #efeff4;
 }
 
 
