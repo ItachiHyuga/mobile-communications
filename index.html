@@ -593,7 +593,7 @@
             receiver (normally taken as between —90 dBm and —100 dBm), a slightly
             stronger signal level is used as a threshold at which a handoff is made. This margin,
             given by </p>
-          <p class=”formula”>▲ = Pr (handoff) - Pr(minimum usable) </p>
+          <p class="formula">▲ = Pr (handoff) - Pr(minimum usable) </p>
           <p>
             It cannot be too large or too small. If
             ▲ is too large, unnecessary handoffs which burden the MSC may occur, and if A
@@ -740,116 +740,439 @@
 
       </div>
       <!--end-->
+      <!--page 11-->
+      <div class="app-page" data-page="page11">
+        <div class="app-topbar">
+          <div class="app-button left" data-target="navigation"><img
+              src="https://img.icons8.com/offices/16/000000/menu.png"></div>
+          <div class="app-title">The cellular Concept</div>
+          <div class="app-button right" data-target="settings"><img
+              src="https://img.icons8.com/ultraviolet/40/000000/settings.png"></div>
+        </div>
+        <div class="app-content">
+          <div class="app-section sectionheader">
+            <h1>Interference and system capacity</h1>
+          </div>
+          <div class="app-section">
+            <p>Interference is the major limiting factor in the performance of cellular radio
+              systems. Sources of interference include another mobile in the same cell, a call in
+              progress in a neighboring cell, other base stations operating in the same frequency
+              band, or any noncellular system which inadvertently leaks energy into
+              the cellular frequency band. Interference on voice channels causes cross talk,
+              where the subscriber hears interference in the background due to an undesired
+              transmission. On control channels, interference leads to missed and blocked calls
+              due to errors in the digital signaling. Interference is more severe in urban areas,
+              due to the greater HF noise floor and the large number of base stations and
+              mobiles. Interference has been recognized as a major bottleneck in increasing
+              capacity and is often responsible for dropped calls. The two major types of system-
+              generated cellular interference are co-chann€l interference and adjacent
+              channel interference. Even though interfering signals are often generated'within
+              the cellular system, they are difficult to control in practice (due to random propagation
+              effects). Even more difficult to control is interference due to out-of-band
+              users, which arises without warning due to front end overload of subscriber
+              equipment or intermittent intermodulation products. In practice, the transmitters
+              from competing cellular carriers are often a significant source of out-of-band
+              interference, since competitors often locate their base stations in close proximity
+              to one another in order to provide comparable coverage to customers</p>
+
+          </div>
+          <div class="app-section">
+            <b>Co-channel Interference and System Capacity</b></p>
+            <p>
+              Frequency reuse implies that in a given coverage area there are several
+              cells that use the same set of frequencies. These cells are called co-channel cells,
+              and the interference between signals from these cells is called co-channel interference.
+              Unlike thermal noise which can be overcome by increasing the signal-tonoise
+              ration (SNR), co-channel interference cannot be combated by simply
+              increasing the carrier power of a transmitter This is because an increase in carrier
+              transmit power increases the interference to neighboring co-channel cells. To
+              reduce co-channel interference, co-channel cells must be physically separated by
+              a minimum distance to provide sufficient isolation due to propagation.</p>
+            <p>
+              When thesize of each cell is approximately the same, and the base stations
+              transmit the same power, the co-channel interference ratio is independent of the
+              transmitted power and becomes a function of the radius of the cell (B) and the
+              distance between centers of the nearest co-channel cells (D). By increasing the
+              ratio of DIR, the spatial separation between co-channel cells relative to the coverage
+              distance of a cell is increased. Thus interference is reduced from improved
+              isolation of HF energy from the co-channel cell. The parameter Q, called the cochannel
+              reuse ratio, is related to the cluster size. For a hexagonal geometry</p>
+            <img src="images/fig 9.jpg">
+            <p>A small value of Q provides larger capacity since the cluster size N is
+              small, whereas a large value of Q improves the transmission quality, due to a
+              smaller level of co-channel interference. A trade-off must be made between these
+              two objectives in actual cellular design.</p>
+            <img src="images/fig 10.jpg">
+            <p>Let i0 be the number of co-channel interfering cells. Then, the signal-tointerference
+              ratio (S/I or SIR) for a mobile receiver which monitors a forward
+              channel can be expressed as </p>
+            <img src="images/fig 11.jpg">
+            <p>where S is the desired signal power from the desired base station and Ii is the
+              interference power caused by the i th interfering co-channel cell base station. If
+              the signal levels of co-channel cells are known, then the S/I ratio for the forward
+              link can be found using equation </p>
+            <p>
+              Propagation measurements in a mobile radio channel show that the average
+              received signal strength at any point decays as a power law of the distance of
+              separation between a transmitter and receiver. The average received power Pr.
+              at a distance d from the transmitting antenna is approximated by </p>
+
+            <img src="images/fig 12.jpg">
+
+            <p>where P0 is the power received at a close-in reference point in the far field region
+              of the antenna at a small distance d0 from the transmitting antenna, and n is
+              the path loss exponent. Now consider the forward link where the desired signal
+              is the serving base station and where the interference is due to co-channel base
+              stations. If Di. is the distance of the i th interferer from the mobile, the received
+              power at. a given mobile due to the i th interfering cell will be proportional to (Di)-n The path loss
+              exponent typically ranges between 2 and 4 in urban cellular
+              systems </p>
+            <p>
+              When the transmit power of each base station is equal and the path loss
+              exponent is the same throughout the coverage area, S/I for a mobile can be
+              approximated as </p>
+            <img src="images/fig 13.jpg">
+
+            <p>Considering only the first layer of interfering cells, if all the interfering
+              base stations are equidistant from the desired base station and if this distance is
+              equal to the distance D between cell centers, then equation simplifies to </p>
+
+            <img src="images/fig 14.jpg">
+            <p>Equation relates S/I to the cluster size N, which in turn determines
+              the overall capacity of the system from equation. For example, assume that
+              the six closest cells are close enough to create significant interference and that
+              they are all approximately equal distance from the desired base station. For the
+              U.S. AMPS cellular system which uses FM and 30 kHz channels, subjective tests
+              indicate that sufficient voice quality is provided when S/I is greater than or
+              equal to 18 dB. Using equation it can be shown in order to meet this
+              requirement, the cluster size N should be at least 6.49, assuming a path loss
+              exponent ii = 4. Thus a minimum cluster size of 7 is required to meet an S/I
+              requirement of 18 dB. It should be noted that equation is based on the hexagonal
+              cell geometry where all the interfering cells are equidistant from the base
+              station receiver, and hence provides an optimistic result in many cases. For some
+              frequency reuse plans (e.g. N = 4), the closest interfering cells vary widely in
+              their distances from the desired cell.</p>
+            <p>
+              From Figure 2.5, it can be seen for a 7-cell cluster, with the mobile unit is at
+              the cell boundary, the mobile is a distance D — 1? from the two nearest co-channel
+              interfering cells and approximately D + R/2, D , D - R/2, and D + R from the
+              other interfering cells in the first tier [Lee86]. Using equation (2.9) and assuming
+              n equals 4, the signal-to-interference ratio for the worst case can be closely
+              approximated as (an exact expression is worked out by Jacobsmeyer .</p>
+            <img src="images/fig 15.jpg">
+            <p>Above Equation can be rewritten in terms of the co-channel reuse ratio Q,
+              As </p>
+
+
+            <img src="images/fig 16.jpg">
+            <p>For N = 7, the co-channel reuse ratio Q is 4.6, and the worst case S/I is
+              approximated as 49.56 (17 dB) using equation (2.11), whereas an exact solution
+              using equation (2.8) yields 17.8 dB. Hence for a 7-cell cluster, the S/I
+              ratio is slightly less than 18 dB for the worst case. To design the cellular system
+              for proper performance in the worst case , it would be necessary to increase N to
+              the next largest size, which from equation (2.3)is found to be 12 (corresponding
+              to i = j = 2). This obviously entails a significant decrease in capdcity, since 12-
+              cell reuse offers a spectrum utilization of 1/12 within each cell, whereas 7-cell
+              reuse offers a spectrum utilization of 1/7. In practice, a capacity reduction of 7112
+              would not be tolerable to accommodate for the worst case situation which rarely
+              occurs. From the above discussion it is clear that co-channel interference determines
+              link performance, which in turn dictates the frequency reuse plan and the
+              overall capacity of cellular systems. </p>
+            <img src="images/fig 17.jpg">
 
 
 
-    </div>
-    <!--end-->
-
-    <div class="app-page" data-page="navigation">
-      <div class="app-topbar">
-        <div class="app-button left" data-back>Back</div>
-        <div class="app-title">Table of Contents</div>
-
-      </div>
-
-      <div class="app-content">
-        <ul class="app-list">
-          <label><b>1. Introduction to wireless communication systems</b></label>
-          <li class="app-button" data-target="page2">Introduction</li>
-          <label><b>2. Fundamentals of the Mobile Communication</b></label>
-          <li class="app-button" data-target="page3">Wireless Communications System Definitions</li>
-          <li class="app-button" data-target="page4">Frequency division duplexing (FDD)</li>
-          <li class="app-button" data-target="page5">Time division duplexing (TDD)</li>
-          <li class="app-button" data-target="page6">Paging Systems</li>
-          <li class="app-button" data-target="page7">Cellular Telephone Systems</li>
-          <label><b>3. The cellular Concept</b></label>
-          <li class="app-button" data-target="page8">Frequency Reuse</li>
-          <li class="app-button" data-target="page9">Channel Assignment Strategies</li>
-          <li class="app-button" data-target="page10">Handoff strategies</li>
-          <li class="app-button" data-target="page11">Interference and system capacity</li>
-          <li class="app-button" data-target="page12">Trunking and Grade of service</li>
-          <li class="app-button" data-target="page13">Improving the capacity of cellular systems</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="app-page" data-page="settings">
-      <div class="app-topbar">
-        <div class="app-button left" data-back>Back</div>
-        <div class="app-title">Settings</div>
-
-      </div>
-      <div class="app-content">
-        <div class="app-section">
-          <ul class="app-list">
-            <label>Font Size</label>
-            <li>
-              <ul class="fontsize">
-                <li class="app-button" onclick="resizeText(1)">A+</li>
-
-                <li class="app-button" onclick="resizeText(-1)">A-</li>
-              </ul>
-            </li>
-            <label>Justification</label>
-            <li>
-              <ul class="textjustification">
 
 
-                <li class="app-button" onclick="justify()">ON</li>
-                <li class="app-button" onclick="unjustify()">OFF</li>
-              </ul>
-            </li>
-            <label>Themes</label>
 
-            <li>
-              <ul class="themes">
-                <li id="dark" onclick="applyt(this)"></li>
-                <li id="coffee" onclick="applyt(this)"></li>
-                <li id="sea" onclick="applyt(this)"></li>
-                <li id="sky" onclick="applyt(this)"></li>
-                <li id="default" onclick="applyt(this)"></li>
+          </div>
+          <div class="app-section">
+            <p><b> Adjacent Channel Interference </b></p>
+            <p>
+              Interference resulting from signals which are adjacent in frequency to the
+              desired signal is called adjacent channel interference. Adjacent channel interference
+              results from imperfect receiver filters which allow nearby frequencies to
+              leak into the passband. The problem can be particularly serious if an adjacent
+              channel user is transmitting in very close range to a subscriber's receiver, while
+              the receiver attempts to receive a base station on the desired channel. This is
+              referred to as the near-far effect, where a nearby transmitter (which may or may not be of the same type
+              as that used by the cellular system) captures the receiver
+              of the subscriber. </p>
+            <p>Alternatively, the near-far effect occurs when a mobile close to
+              a base station transmits on a channel close to one being used by a weak mobile.
+              The base station may have difficulty in discriminating the desired mobile user
+              from the "bleedover" caused by the close adjacent channel mobile.
+              Adjacent channel interference can be minimized through careful filtering
+              and channel assignments. Since each cell is given only a fraction of the available
+              channels, a cell need not be assigned channels which are all adjacent in frequency.</p>
+            <p>
+              By keeping the frequency separation between each channel in a given
+              cell as large as possible, the adjacent channel interference may be reduced considerably.
+              Thus instead of assigning channels which form a contiguous band of
+              frequencies within a particular cell, channels are allocated such that the frequency
+              separation between channels in a given cell is maximized. By sequentially
+              assigning successive channels in the frequency band to different cells,
+              many channel allocation schemes are able to separate adjacent channels in a cell
+              by as many as N channel bandwidths, where N is the cluster size. Some channel
+              allocation schemes also prevent a secondary source of adjacent channel interference
+              by avoiding the use of adjacent channels in neighboring cell sites.</p>
 
-              </ul>
-            </li>
+
+          </div>
 
 
+
+
+          <ul class="footerl">
+            <li class="app-button" data-target="page10"> Prev </li>
+
+            <li class="app-button" data-target="page12"> Next </li>
           </ul>
-        </div>
-        <div class="app-section">
-          <h1>Sample Text</h1>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-            ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-            nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
-            anim id est laborum.</p>
-          <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem
-            aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
-          </p>
-        </div>
-      </div>
-    </div>
-    <script src="app.js"></script>
-    <script src="app.min.js"></script>
-    <script>
-      App.load("home");
-      setTimeout(function () {
-        App.load("page2");
-      }, 300);
-      App.controller('home', function (page) {
-        // put stuff here
-      });
 
-      App.controller('page2', function (page) {
-        // put stuff here
-      });
 
-      try {
-        App.restore();
-      } catch (err) {
-        App.load('home');
-      }
-    </script>
+        </div>
+        <!--end-->
+        <!--page 12-->
+        <div class="app-page" data-page="page12">
+          <div class="app-topbar">
+            <div class="app-button left" data-target="navigation"><img
+                src="https://img.icons8.com/offices/16/000000/menu.png"></div>
+            <div class="app-title">The cellular Concept</div>
+            <div class="app-button right" data-target="settings"><img
+                src="https://img.icons8.com/ultraviolet/40/000000/settings.png"></div>
+          </div>
+          <div class="app-content">
+            <div class="app-section sectionheader">
+              <h1>Trunking and Grade of service</h1>
+            </div>
+            <div class="app-section">
+              <p><b>Trunking</b></p>
+              <p>Cellular radio systems rely on trunking to accommodate a large number of
+                users in a limited radio spectrum. The concept of trunking allows a large number
+                of users to share the relatively small number of channels in a cell by providing
+                access to each user, on demand, from a pool of available channels. In a trunked
+                radio system, each user is allocated a channel on a per call basis, and upon termination
+                of the call, the previously occupied channel is immediately returned to
+                the pool of available channels.</p>
+              <p>
+                Trunking exploits the statistical behavior of users so that a fixed number of
+                channels or circuits may accommodate a large, random user community. The
+                telephone company uses trunking theory to determine the number of telephone circuits that need to be
+                allocated for office buildings with hundreds of telephones,
+                and this same principle is used in designing cellular radio systems. There is a
+                trade-off between the number of available telephone circuits and the likelihood
+                of a particular user finding that no circuits are available during the peak calling
+                time. As the number of phone lines decreases, it becomes more likely that all circuits
+                will be busy for a particular user. In a trunked mobile radio sy 4tem, when a
+                particular user requests service and all of the radio channels are already in use,
+                the user is blocked, or denied access to the system. In some systems, a queue
+                may be used to hold the requesting users until a channel becomes available.</p>
+              <p>
+                To design trunkS radio systems that can handle a specific capacity at a
+                specific "grade of service", it is essential to understand trunking theory and
+                queuing theory The fundamentals of trunking theory were developed by Erlang,
+                a Danish mathematician who, in the late 19th century, embarked on the study of
+                how a large population could be accommodated by a limited number of servers
+                {Bou88]. Today, the measure of traffic intensity bears his name. One Erlang represents
+                the amount of traffic intensity carried by a channel that is completely
+                occupied (i.e. 1 call-hour per hour or 1 call-miiiute per minute). For example, a
+                radio channel that is occupied for thirty minutes during an hour carries 0.5
+                Erlangs of traffic.</p>
+
+
+            </div>
+            <div class="app-section">
+              <p>
+
+                <b>Grade of Service </b></p>
+              <p>
+                The grade of service (GOS) is a measure of the ability of a user to access a
+                trunked system during the busiest hour. The busy hour is based upon customer
+                demand at the busiest hour during a week, month, or year. The busy hours for
+                cellular radio systems typically occur during rush hours, between 4 p.m. and 6
+                p.m. on a Thursday or Friday evening. The grade of service is a benchmark used
+                to define the desired performance of a particular trunked system by specifying a
+                desired likelihood of a user obtaining channel access given a specific number of
+                channels available in the system. It is the wireless designer's job to estimate the
+                maximum required capacity and to allocate the proper number of channels in
+                order to meet the Gas. GOS is typically given as the likelihood that a call is
+                blocked, or the likelihood of a call experiencing a delay greater than a certain
+                queuing time.</p>
+
+
+
+
+
+            </div>
+
+            <ul class="footerl">
+              <li class="app-button" data-target="page11"> Prev </li>
+
+              <li class="app-button" data-target="page13"> Next </li>
+            </ul>
+
+
+          </div>
+          <!--end-->
+          <!--page 13-->
+          <div class="app-page" data-page="page13">
+            <div class="app-topbar">
+              <div class="app-button left" data-target="navigation"><img
+                  src="https://img.icons8.com/offices/16/000000/menu.png"></div>
+              <div class="app-title">The cellular Concept</div>
+              <div class="app-button right" data-target="settings"><img
+                  src="https://img.icons8.com/ultraviolet/40/000000/settings.png"></div>
+            </div>
+            <div class="app-content">
+              <div class="app-section sectionheader">
+                <h1>Improving the capacity of cellular systems</h1>
+              </div>
+              <div class="app-section">
+
+                <p>As the demand for wireless service increases, the number of channels
+                  assigned to a cell eventually becomes insufficient to support the required number of users. At this
+                  point, cellular design techniques are needed to provide more
+                  channels per unit coverage area. Techniques such as cell splitting, sectoring, and
+                  coverage zone approaches are used in practice to expand the capacity of cellular
+                  systems. Cell splitting allows an orderly growth of the cellular system. Sectoring
+                  uses directional antennas to further control the interference and frequency reuse
+                  of channels. The zone microcell concept distributes the coverage of a cell and
+                  extends the cell boundary to hard-to-reach places. While cell splitting increases
+                  the number of base stations in order to increase capacity, sectoring and zone
+                  microcells rely on base station antenna placements to improve capacity by reducing co-channel
+                  interference. Cell splitting and zone inicrocell techniques do not
+                  suffer the trunking inefficiencies experienced by sectored cells, and enable the
+                  base station to oversee all handoff chores related to the microcells, thus reducing
+                  the computational load at the MSC. These three popular capacity improvement
+                  techniques will be explained in detail.</p>
+
+              </div>
+              <ul class="footerl">
+                <li class="app-button" data-target="page12"> Prev </li>
+
+                <li class="app-button" data-target="page2"> Donate a coffee </li>
+              </ul>
+
+
+            </div>
+            <!--end-->
+
+
+
+          </div>
+          <!--end-->
+
+          <div class="app-page" data-page="navigation">
+            <div class="app-topbar">
+              <div class="app-button left" data-back>Back</div>
+              <div class="app-title">Table of Contents</div>
+
+            </div>
+
+            <div class="app-content">
+              <ul class="app-list">
+                <label><b>1. Introduction to wireless communication systems</b></label>
+                <li class="app-button" data-target="page2">Introduction</li>
+                <label><b>2. Fundamentals of the Mobile Communication</b></label>
+                <li class="app-button" data-target="page3">Wireless Communications System Definitions</li>
+                <li class="app-button" data-target="page4">Frequency division duplexing (FDD)</li>
+                <li class="app-button" data-target="page5">Time division duplexing (TDD)</li>
+                <li class="app-button" data-target="page6">Paging Systems</li>
+                <li class="app-button" data-target="page7">Cellular Telephone Systems</li>
+                <label><b>3. The cellular Concept</b></label>
+                <li class="app-button" data-target="page8">Frequency Reuse</li>
+                <li class="app-button" data-target="page9">Channel Assignment Strategies</li>
+                <li class="app-button" data-target="page10">Handoff strategies</li>
+                <li class="app-button" data-target="page11">Interference and system capacity</li>
+                <li class="app-button" data-target="page12">Trunking and Grade of service</li>
+                <li class="app-button" data-target="page13">Improving the capacity of cellular systems</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="app-page" data-page="settings">
+            <div class="app-topbar">
+              <div class="app-button left" data-back>Back</div>
+              <div class="app-title">Settings</div>
+
+            </div>
+            <div class="app-content">
+              <div class="app-section">
+                <ul class="app-list">
+                  <label>Font Size</label>
+                  <li>
+                    <ul class="fontsize">
+                      <li class="app-button" onclick="resizeText(1)">A+</li>
+
+                      <li class="app-button" onclick="resizeText(-1)">A-</li>
+                    </ul>
+                  </li>
+                  <label>Justification</label>
+                  <li>
+                    <ul class="textjustification">
+
+
+                      <li class="app-button" onclick="justify()">ON</li>
+                      <li class="app-button" onclick="unjustify()">OFF</li>
+                    </ul>
+                  </li>
+                  <label>Themes</label>
+
+                  <li>
+                    <ul class="themes">
+                      <li id="dark" onclick="applyt(this)"></li>
+                      <li id="coffee" onclick="applyt(this)"></li>
+                      <li id="sea" onclick="applyt(this)"></li>
+                      <li id="sky" onclick="applyt(this)"></li>
+                      <li id="default" onclick="applyt(this)"></li>
+
+                    </ul>
+                  </li>
+
+
+                </ul>
+              </div>
+              <div class="app-section">
+                <h1>Sample Text</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                  et
+                  dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                  aliquip ex
+                  ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                  fugiat
+                  nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+                  mollit
+                  anim id est laborum.</p>
+                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
+                  totam
+                  rem
+                  aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt
+                  explicabo.
+                </p>
+              </div>
+            </div>
+          </div>
+          <script src="app.js"></script>
+          <script src="app.min.js"></script>
+          <script>
+            App.load("home");
+            setTimeout(function () {
+              App.load("page2");
+            }, 300);
+            App.controller('home', function (page) {
+              // put stuff here
+            });
+
+            App.controller('page2', function (page) {
+              // put stuff here
+            });
+
+            try {
+              App.restore();
+            } catch (err) {
+              App.load('home');
+            }
+          </script>
 </body>
 
 </html>
